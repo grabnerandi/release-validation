@@ -1,0 +1,17 @@
+spec_version: 0.1.4
+indicators:
+  Availability_of_aapl: SLO;3c4365e6-5c47-3410-86f0-32048e8444d9
+  Performance_SLO_of_aapl: SLO;c9c8d046-3465-37c8-b9e9-27a516166161
+  host_cpu: metricSelector=builtin:host.cpu.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(-3211135671173353721)
+  host_disk_queue: metricSelector=builtin:host.disk.queueLength:splitBy():max:names&entitySelector=type(HOST),mzId(-3211135671173353721)
+  host_mem: metricSelector=builtin:host.mem.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(-3211135671173353721)
+  problems: PV2;problemSelector=status(open),managementZoneIds(-3211135671173353721)
+  proc_count: metricSelector=builtin:tech.generic.processCount:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
+  process_cpu: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
+  process_memory: MV2;Byte;metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
+  svc_fr: metricSelector=builtin:service.errors.server.rate:splitBy():avg:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
+  svc_rt_p50: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(50.000000):names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
+  svc_rt_p90: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
+  svc_rt_p95: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(95.000000):names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
+  svc_tp_min: metricSelector=builtin:service.requestCount.total:splitBy():value:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
+  svc2svc_calls: metricSelector=builtin:service.nonDbChildCallCount:splitBy():value:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
