@@ -1,0 +1,38 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - "curl --request POST --data 'payload={   \"channel\" :
+          \"hotday--{{.data.project}}\",  \"username\" :
+          \"keptn\",     \"blocks\": [    {      \"type\" :
+          \"section\",      \"text\" : {        \"type\":
+          \"mrkdwn\",        \"text\" : \"*Keptn Evaluation finished:*
+          {{.data.result}} ({{.data.evaluation.score}} /
+          100)\"      }    },    {      \"type\" : \"section\",      \"text\" :
+          {        \"type\": \"mrkdwn\",        \"text\" : \"*Message:*
+          {{.data.message}}\"      }    },    {      \"type\" :
+          \"section\",      \"text\" : {        \"type\":
+          \"mrkdwn\",        \"text\" : \"*Start Time:*
+          {{.data.evaluation.timeStart}}\\n*End Time:*
+          {{.data.evaluation.timeEnd}}\"      }    },    {      \"type\" :
+          \"section\",      \"text\" : {        \"type\":
+          \"mrkdwn\",        \"text\" : \"*Project:*
+          {{.data.project}}\\n*Stage:* {{.data.stage}}\\n*Service:*
+          {{.data.service}}\\n*Details:*
+          {{.env.secret_slackwebhook_bridgeUrl}}/bridge/evaluation/{{.shkeptnco\
+          ntext}}\"      }    }  ]}'
+          https://hooks.slack.com/services/{{.env.secret_slackwebhook_token}}"
+      envFrom:
+        - name: secret_slackwebhook_token
+          secretRef:
+            name: slack-webhook
+            key: token
+        - name: secret_slackwebhook_bridgeUrl
+          secretRef:
+            name: slack-webhook
+            key: bridgeUrl
+      subscriptionID: 43b44fe6-3570-4ed0-ac63-7fa1dbfff7a0
