@@ -9,6 +9,7 @@ indicators:
   proc_count: metricSelector=builtin:tech.generic.processCount:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
   process_cpu: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
   process_memory: MV2;Byte;metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
+  security_problems: SECPV2;securityProblemSelector=status(OPEN),managementZoneIds(-3211135671173353721)
   svc_fr: metricSelector=builtin:service.errors.server.rate:splitBy():avg:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
   svc_rt_p50: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(50.000000):names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
   svc_rt_p90: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
