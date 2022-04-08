@@ -1,7 +1,6 @@
 spec_version: 0.1.4
 indicators:
-  Availability_of_acer: SLO;975dbdbb-4c99-329a-88ed-186a7aa3bfe6
-  Performance_SLO_of_acer: SLO;b31d9b37-31b7-3e4f-aa67-7315264097e7
+  Availability_of_acer: SLO;515583f8-450f-3eb2-a65c-7b758725c572
   host_cpu: metricSelector=builtin:host.cpu.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(3454304867255837613)
   host_disk_queue: metricSelector=builtin:host.disk.queueLength:splitBy():max:names&entitySelector=type(HOST),mzId(3454304867255837613)
   host_mem: metricSelector=builtin:host.mem.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(3454304867255837613)
