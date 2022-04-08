@@ -1,0 +1,18 @@
+spec_version: 0.1.4
+indicators:
+  Availability_of_acer: SLO;975dbdbb-4c99-329a-88ed-186a7aa3bfe6
+  Performance_SLO_of_acer: SLO;b31d9b37-31b7-3e4f-aa67-7315264097e7
+  host_cpu: metricSelector=builtin:host.cpu.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(3454304867255837613)
+  host_disk_queue: metricSelector=builtin:host.disk.queueLength:splitBy():max:names&entitySelector=type(HOST),mzId(3454304867255837613)
+  host_mem: metricSelector=builtin:host.mem.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(3454304867255837613)
+  problems: PV2;problemSelector=status(open),managementZoneIds(3454304867255837613)
+  proc_count: metricSelector=builtin:tech.generic.processCount:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)
+  process_cpu: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)
+  process_memory: MV2;Byte;metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)
+  security_problems: SECPV2;securityProblemSelector=status(OPEN),managementZoneIds(3454304867255837613)
+  svc_fr: metricSelector=builtin:service.errors.server.rate:splitBy():avg:names&entitySelector=type(SERVICE),mzId(3454304867255837613)
+  svc_rt_p50: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(50.000000):names&entitySelector=type(SERVICE),mzId(3454304867255837613)
+  svc_rt_p90: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names&entitySelector=type(SERVICE),mzId(3454304867255837613)
+  svc_rt_p95: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(95.000000):names&entitySelector=type(SERVICE),mzId(3454304867255837613)
+  svc_tp_min: metricSelector=builtin:service.requestCount.total:splitBy():value:names&entitySelector=type(SERVICE),mzId(3454304867255837613)
+  svc2svc_calls: metricSelector=builtin:service.nonDbChildCallCount:splitBy():value:names&entitySelector=type(SERVICE),mzId(3454304867255837613)
