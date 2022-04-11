@@ -11,7 +11,6 @@ indicators:
   njs_tick_dur: metricSelector=builtin:tech.nodejs.uvLoop.totalTime:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
   njs_tick_freq: metricSelector=builtin:tech.nodejs.uvLoop.count:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
   njs_work_lat: metricSelector=builtin:tech.nodejs.uvLoop.processedLatency:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
-  p_avail_avg: metricSelector=builtin:pgi.availability:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
   p_cpu_avg: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
   p_mem_avg: metricSelector=builtin:tech.generic.mem.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
   rc_sum: metricSelector=builtin:service.requestCount.total:splitBy():avg:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
