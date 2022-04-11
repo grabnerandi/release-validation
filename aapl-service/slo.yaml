@@ -70,14 +70,6 @@ objectives:
   warning: []
   weight: 1
   key_sli: false
-- sli: p_avail_avg
-  displayName: ""
-  pass:
-  - criteria:
-    - '>80.00'
-  warning: []
-  weight: 1
-  key_sli: false
 - sli: p_mem_avg
   displayName: ""
   pass:
