@@ -10,7 +10,8 @@ objectives:
   displayName: ""
   pass:
   - criteria:
-    - <43272.46
+    - <200
+    - <+10%
   warning: []
   weight: 1
   key_sli: false
@@ -84,8 +85,8 @@ objectives:
   - criteria:
     - '>0.95'
   warning: []
-  weight: 1
-  key_sli: false
+  weight: 5
+  key_sli: true
 - sli: a_xhr_avg
   displayName: ""
   pass:
