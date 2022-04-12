@@ -135,6 +135,26 @@ objectives:
   warning: []
   weight: 1
   key_sli: false
+- sli: Availability_of_aapl
+  displayName: ""
+  pass:
+  - criteria:
+    - '>=99.000000'
+  warning:
+  - criteria:
+    - '>=95.000000'
+  weight: 1
+  key_sli: false
+- sli: Performance_SLO_of_aapl
+  displayName: ""
+  pass:
+  - criteria:
+    - '>=90.000000'
+  warning:
+  - criteria:
+    - '>=85.000000'
+  weight: 1
+  key_sli: false
 total_score:
   pass: 90%
   warning: 70%
