@@ -2,19 +2,19 @@ spec_version: 0.1.4
 indicators:
   Availability_of_aapl: SLO;e32e473a-2698-3dab-b43c-47eddefb00a9
   Performance_SLO_of_aapl: SLO;5cefe18f-03ae-398b-b5ac-fe5c0b9f2482
-  a_apdex: metricSelector=builtin:apps.web.apdex.userType:splitBy():avg:names&entitySelector=type(APPLICATION),mzId(-3211135671173353721)
-  a_load_avg: metricSelector=builtin:apps.web.actionDuration.load.browser:splitBy():avg:names&entitySelector=type(APPLICATION),mzId(-3211135671173353721)
-  a_xhr_avg: metricSelector=builtin:apps.web.actionDuration.xhr.browser:splitBy():avg:names&entitySelector=type(APPLICATION),mzId(-3211135671173353721)
-  fr_avg: metricSelector=builtin:service.errors.server.rate:splitBy():avg:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
-  h_cpu_avg: metricSelector=builtin:host.cpu.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(-3211135671173353721)
-  h_disk_max: metricSelector=builtin:host.disk.queueLength:splitBy():max:names&entitySelector=type(HOST),mzId(-3211135671173353721)
-  h_mem_avg: metricSelector=builtin:host.mem.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(-3211135671173353721)
-  njs_event_lat: metricSelector=builtin:tech.nodejs.uvLoop.loopLatency:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
-  njs_tick_dur: metricSelector=builtin:tech.nodejs.uvLoop.totalTime:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
-  njs_tick_freq: metricSelector=builtin:tech.nodejs.uvLoop.count:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
-  njs_work_lat: metricSelector=builtin:tech.nodejs.uvLoop.processedLatency:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
-  p_cpu_avg: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
-  p_mem_avg: metricSelector=builtin:tech.generic.mem.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)
-  rc_sum: metricSelector=builtin:service.requestCount.total:splitBy():avg:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
-  rt_p50: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():median:names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
-  rt_p90: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(90):names&entitySelector=type(SERVICE),mzId(-3211135671173353721)
+  a_apdex: entitySelector=type(APPLICATION),mzId(-3211135671173353721)&metricSelector=builtin:apps.web.apdex.userType:splitBy():avg:names
+  a_load_avg: entitySelector=type(APPLICATION),mzId(-3211135671173353721)&metricSelector=builtin:apps.web.actionDuration.load.browser:splitBy():avg:names
+  a_xhr_avg: entitySelector=type(APPLICATION),mzId(-3211135671173353721)&metricSelector=builtin:apps.web.actionDuration.xhr.browser:splitBy():avg:names
+  fr_avg: entitySelector=type(SERVICE),mzId(-3211135671173353721)&metricSelector=builtin:service.errors.server.rate:splitBy():avg:names
+  h_cpu_avg: entitySelector=type(HOST),mzId(-3211135671173353721)&metricSelector=builtin:host.cpu.usage:splitBy():avg:names
+  h_disk_max: entitySelector=type(HOST),mzId(-3211135671173353721)&metricSelector=builtin:host.disk.queueLength:splitBy():max:names
+  h_mem_avg: entitySelector=type(HOST),mzId(-3211135671173353721)&metricSelector=builtin:host.mem.usage:splitBy():avg:names
+  njs_event_lat: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)&metricSelector=builtin:tech.nodejs.uvLoop.loopLatency:splitBy():avg:names
+  njs_tick_dur: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)&metricSelector=builtin:tech.nodejs.uvLoop.totalTime:splitBy():avg:names
+  njs_tick_freq: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)&metricSelector=builtin:tech.nodejs.uvLoop.count:splitBy():avg:names
+  njs_work_lat: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)&metricSelector=builtin:tech.nodejs.uvLoop.processedLatency:splitBy():avg:names
+  p_cpu_avg: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)&metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names
+  p_mem_avg: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(-3211135671173353721)&metricSelector=builtin:tech.generic.mem.usage:splitBy():avg:names
+  rc_sum: entitySelector=type(SERVICE),mzId(-3211135671173353721)&metricSelector=builtin:service.requestCount.total:splitBy():avg:names
+  rt_p50: MV2;MicroSecond;entitySelector=type(SERVICE),mzId(-3211135671173353721)&metricSelector=builtin:service.response.time:splitBy():median:names
+  rt_p90: MV2;MicroSecond;entitySelector=type(SERVICE),mzId(-3211135671173353721)&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
