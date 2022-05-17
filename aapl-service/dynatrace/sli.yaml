@@ -1,7 +1,7 @@
 spec_version: 0.1.4
 indicators:
-  Availability_of_aapl: SLO;e32e473a-2698-3dab-b43c-47eddefb00a9
-  Performance_SLO_of_aapl: SLO;5cefe18f-03ae-398b-b5ac-fe5c0b9f2482
+  Availability_of_aapl: SLO;3f1fce24-23b0-38f6-81b1-d3150ef5c12e
+  Performance_SLO_of_aapl: SLO;804f392b-8f8b-3375-bd29-810f52501c76
   a_apdex: entitySelector=type(APPLICATION),mzId(-3211135671173353721)&metricSelector=builtin:apps.web.apdex.userType:splitBy():avg:names
   a_load_avg: entitySelector=type(APPLICATION),mzId(-3211135671173353721)&metricSelector=builtin:apps.web.actionDuration.load.browser:splitBy():avg:names
   a_xhr_avg: entitySelector=type(APPLICATION),mzId(-3211135671173353721)&metricSelector=builtin:apps.web.actionDuration.xhr.browser:splitBy():avg:names
