@@ -24,7 +24,7 @@ spec:
           {{.data.project}}\\n*Stage:* {{.data.stage}}\\n*Service:*
           {{.data.service}}\\n*Details:*
           {{.env.secret_slackwebhook_bridgeUrl}}/bridge/evaluation/{{.shkeptnco\
-          ntext}}\\n*Executed By:*{{.data.labels.executedBy}}\"      }    } ]}'
+          ntext}}\\n*Executed By:* {{.data.labels.executedBy}}\"      }    } ]}'
           https://hooks.slack.com/services/{{.env.secret_slackwebhook_token}}"          
       envFrom:
         - name: secret_slackwebhook_token
