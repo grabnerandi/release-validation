@@ -1,5 +1,7 @@
 spec_version: 0.1.4
 indicators:
+    Availability_of_acer: SLO;dce8aeda-0913-3b59-97bf-3aa24d658849
+    Performance_SLO_of_acer: SLO;b8f9537b-1bb6-3774-8ffe-79f4487eff2b
     host_cpu: entitySelector=type(HOST),mzId(3454304867255837613)&metricSelector=builtin:host.cpu.usage:splitBy():avg:names
     host_disk_queue: entitySelector=type(HOST),mzId(3454304867255837613)&metricSelector=builtin:host.disk.queueLength:splitBy():max:names
     host_mem: entitySelector=type(HOST),mzId(3454304867255837613)&metricSelector=builtin:host.mem.usage:splitBy():avg:names
@@ -7,8 +9,6 @@ indicators:
     proc_count: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)&metricSelector=builtin:tech.generic.processCount:splitBy():avg:names
     process_cpu: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)&metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names
     process_memory: MV2;Byte;entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)&metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names
-    slo_35aa3937-80f8-38d6-a862-4f88fee60ba9: ""
-    slo_fe822869-d973-3985-938b-5ddd8ecaadde: ""
     svc_fr: entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.errors.server.rate:splitBy():avg:names
     svc_rt_p50: MV2;MicroSecond;entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.response.time:splitBy():percentile(50.000000):names
     svc_rt_p90: MV2;MicroSecond;entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names
