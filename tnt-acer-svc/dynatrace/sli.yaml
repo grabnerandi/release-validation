@@ -1,18 +1,17 @@
 spec_version: 0.1.4
 indicators:
-  Availability_of_acer: SLO;35aa3937-80f8-38d6-a862-4f88fee60ba9
-  Performance_SLO_of_acer: SLO;fe822869-d973-3985-938b-5ddd8ecaadde
-  host_cpu: metricSelector=builtin:host.cpu.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(3454304867255837613)
-  host_disk_queue: metricSelector=builtin:host.disk.queueLength:splitBy():max:names&entitySelector=type(HOST),mzId(3454304867255837613)
-  host_mem: metricSelector=builtin:host.mem.usage:splitBy():avg:names&entitySelector=type(HOST),mzId(3454304867255837613)
-  problems: PV2;problemSelector=status(open),managementZoneIds(3454304867255837613)
-  proc_count: metricSelector=builtin:tech.generic.processCount:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)
-  process_cpu: metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)
-  process_memory: MV2;Byte;metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names&entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)
-  security_problems: SECPV2;securityProblemSelector=status(OPEN),managementZoneIds(3454304867255837613)
-  svc_fr: metricSelector=builtin:service.errors.server.rate:splitBy():avg:names&entitySelector=type(SERVICE),mzId(3454304867255837613)
-  svc_rt_p50: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(50.000000):names&entitySelector=type(SERVICE),mzId(3454304867255837613)
-  svc_rt_p90: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names&entitySelector=type(SERVICE),mzId(3454304867255837613)
-  svc_rt_p95: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():percentile(95.000000):names&entitySelector=type(SERVICE),mzId(3454304867255837613)
-  svc_tp_min: metricSelector=builtin:service.requestCount.total:splitBy():value:names&entitySelector=type(SERVICE),mzId(3454304867255837613)
-  svc2svc_calls: metricSelector=builtin:service.nonDbChildCallCount:splitBy():value:names&entitySelector=type(SERVICE),mzId(3454304867255837613)
+    host_cpu: entitySelector=type(HOST),mzId(3454304867255837613)&metricSelector=builtin:host.cpu.usage:splitBy():avg:names
+    host_disk_queue: entitySelector=type(HOST),mzId(3454304867255837613)&metricSelector=builtin:host.disk.queueLength:splitBy():max:names
+    host_mem: entitySelector=type(HOST),mzId(3454304867255837613)&metricSelector=builtin:host.mem.usage:splitBy():avg:names
+    problems: PV2;problemSelector=status("open"),managementZoneIds(3454304867255837613)
+    proc_count: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)&metricSelector=builtin:tech.generic.processCount:splitBy():avg:names
+    process_cpu: entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)&metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names
+    process_memory: MV2;Byte;entitySelector=type(PROCESS_GROUP_INSTANCE),mzId(3454304867255837613)&metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names
+    slo_35aa3937-80f8-38d6-a862-4f88fee60ba9: ""
+    slo_fe822869-d973-3985-938b-5ddd8ecaadde: ""
+    svc_fr: entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.errors.server.rate:splitBy():avg:names
+    svc_rt_p50: MV2;MicroSecond;entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.response.time:splitBy():percentile(50.000000):names
+    svc_rt_p90: MV2;MicroSecond;entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names
+    svc_rt_p95: MV2;MicroSecond;entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.response.time:splitBy():percentile(95.000000):names
+    svc_tp_min: entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.requestCount.total:splitBy():value:names
+    svc2svc_calls: entitySelector=type(SERVICE),mzId(3454304867255837613)&metricSelector=builtin:service.nonDbChildCallCount:splitBy():value:names
