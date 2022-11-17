@@ -44,12 +44,8 @@ objectives:
       displayName: Respone Time regression
       pass:
         - criteria:
-            - '>=0.000000'
-            - <100000.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1000000.000000
+            - <+10%
+      warning: []
       weight: 1
       key_sli: false
 total_score:
