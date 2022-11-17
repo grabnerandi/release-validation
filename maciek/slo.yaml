@@ -6,46 +6,64 @@ comparison:
     number_of_comparison_results: 1
     aggregate_function: avg
 objectives:
+    - sli: slo_for_maciek_synthetic
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=95.000000'
+      warning:
+        - criteria:
+            - '>=90.000000'
+      weight: 1
+      key_sli: false
+    - sli: slo_for_maciek_synthetic
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=95.000000'
+      warning:
+        - criteria:
+            - '>=90.000000'
+      weight: 1
+      key_sli: false
+    - sli: slo_for_maciek_synthetic
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=95.000000'
+      warning:
+        - criteria:
+            - '>=90.000000'
+      weight: 1
+      key_sli: false
     - sli: visually_complete
       displayName: visually complete
       pass:
         - criteria:
             - '>=0.000000'
-            - <1.000000
+            - <2.500000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <5.000000
+      weight: 1
+      key_sli: false
+    - sli: response_time
+      displayName: Response Time
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: visually_complete
+      displayName: visually complete
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <2.000000
       warning:
         - criteria:
             - '>=0.000000'
             - <4.000000
-      weight: 1
-      key_sli: false
-    - sli: slo_for_maciek_synthetic
-      displayName: ""
-      pass:
-        - criteria:
-            - '>=95.000000'
-      warning:
-        - criteria:
-            - '>=90.000000'
-      weight: 1
-      key_sli: false
-    - sli: slo_for_maciek_synthetic
-      displayName: ""
-      pass:
-        - criteria:
-            - '>=95.000000'
-      warning:
-        - criteria:
-            - '>=90.000000'
-      weight: 1
-      key_sli: false
-    - sli: slo_for_maciek_synthetic
-      displayName: ""
-      pass:
-        - criteria:
-            - '>=95.000000'
-      warning:
-        - criteria:
-            - '>=90.000000'
       weight: 1
       key_sli: false
 total_score:
