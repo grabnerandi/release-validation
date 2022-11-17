@@ -27,9 +27,21 @@ objectives:
             - '>=0.000000'
             - <6.000000
       weight: 1
-      key_sli: false
+      key_sli: true
     - sli: server-side_response_time
       displayName: Server-side response time
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <100000.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <1000000.000000
+      weight: 5
+      key_sli: false
+    - sli: respone_time_regression
+      displayName: Respone Time regression
       pass:
         - criteria:
             - '>=0.000000'
