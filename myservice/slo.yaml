@@ -6,8 +6,8 @@ comparison:
     number_of_comparison_results: 1
     aggregate_function: avg
 objectives:
-    - sli: server-side_response_time
-      displayName: Server-side response time
+    - sli: failure_rate
+      displayName: failure rate
       pass:
         - criteria:
             - '>=0.000000'
