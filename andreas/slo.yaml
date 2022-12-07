@@ -16,18 +16,6 @@ objectives:
             - '>=90.000000'
       weight: 1
       key_sli: false
-    - sli: visually_complete
-      displayName: visually complete
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <3.000000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <6.000000
-      weight: 1
-      key_sli: true
     - sli: server-side_response_time
       displayName: Server-side response time
       pass:
@@ -48,12 +36,18 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
-    - sli: graph
-      displayName: Graph
-      pass: []
-      warning: []
+    - sli: visually_complete
+      displayName: visually complete
+      pass:
+        - criteria:
+            - '>=0.000000'
+            - <3.000000
+      warning:
+        - criteria:
+            - '>=0.000000'
+            - <6.000000
       weight: 1
-      key_sli: false
+      key_sli: true
 total_score:
     pass: 90%
     warning: 75%
